@@ -1,4 +1,4 @@
-// restdb.io endpoint: https://kea21-7e1e.restdb.io/rest/byu-products
+// restdb.io endpoint: https://spring21-427e.restdb.io/rest/byu-products
 // apikey: 602f9e445ad3610fb5bb63d5
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -7,9 +7,9 @@ const refill = urlParams.get("refills");
 const casting = urlParams.get("casting");
 
 //all products;
-let urlKits = `https://kea21-7e1e.restdb.io/rest/byu-products?q={"category":"Kits"}`;
-let urlRefills = `https://kea21-7e1e.restdb.io/rest/byu-products?q={"category":"Refill"}`;
-let urlCasting = `https://kea21-7e1e.restdb.io/rest/byu-products?q={"category":"Casting"}`;
+let urlKits = `https://spring21-427e.restdb.io/rest/byu-products?q={"category":"Kits"}`;
+let urlRefills = `https://spring21-427e.restdb.io/rest/byu-products?q={"category":"Refill"}`;
+let urlCasting = `https://spring21-427e.restdb.io/rest/byu-products?q={"category":"Casting"}`;
 
 if (kits) {
   console.log("get kits");
@@ -19,7 +19,7 @@ if (kits) {
   fetch(urlKits, {
     method: "GET",
     headers: {
-      "x-apikey": "602f9e445ad3610fb5bb63d5",
+      "x-apikey": "6034a7eb5ad3610fb5bb6548",
     },
   })
     .then((res) => res.json())

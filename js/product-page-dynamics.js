@@ -2,12 +2,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const title = urlParams.get('id');
 
 //For particular product ↓
-const fetchProduct = `https://kea21-7e1e.restdb.io/rest/byu-products?q={"_id": "${title}"}`;
+const fetchProduct = `https://spring21-427e.restdb.io/rest/byu-products?q={"_id": "${title}"}`;
 
 fetch(fetchProduct, {
     "method": "GET",
     "headers": {
-      "x-apikey": "602f9e445ad3610fb5bb63d5"
+      "x-apikey": "6034a7eb5ad3610fb5bb6548"
     }
   })
   .then((res) => res.json())
@@ -34,10 +34,10 @@ document.querySelector('.kit-description').innerHTML = product[0].description;
 }
 
 //Fetching wax and casting options ↓
-fetch('https://kea21-7e1e.restdb.io/rest/byu-products?q={"$or": [{"category": "Wax"}, {"category": "Casting"}]}', {
+fetch('https://spring21-427e.restdb.io/rest/byu-products?q={"$or": [{"category": "Wax"}, {"category": "Casting"}]}', {
     "method": "GET",
     "headers": {
-      "x-apikey": "602f9e445ad3610fb5bb63d5"
+      "x-apikey": "6034a7eb5ad3610fb5bb6548"
     }
   })
   .then((res) => res.json())
